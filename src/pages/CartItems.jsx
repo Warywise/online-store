@@ -36,7 +36,7 @@ export default class CartItems extends React.Component {
                 Seu carrinho está vazio
               </h2>
               <Link
-                to="/"
+                to="/onlineStore"
               >
                 <button
                   className="button-add-more-items"
@@ -115,7 +115,7 @@ export default class CartItems extends React.Component {
               <div className="price-total">
                 <div className="completed-shopping">
                   <Link
-                    to="/"
+                    to="/onlineStore"
                   >
                     <button
                       className="button-add-more-items"
@@ -133,7 +133,7 @@ export default class CartItems extends React.Component {
                         .reduce((acc, { price, quantity }) => (
                           acc + (price * quantity)), 0))}` }
                   </h2>
-                  <Link to="/checkout">
+                  <Link to="/onlineStore/checkout">
                     <button
                       className="button-add-more-items"
                       type="button"

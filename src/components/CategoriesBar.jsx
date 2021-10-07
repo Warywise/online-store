@@ -23,7 +23,7 @@ export default class CategoriesBar extends Component {
       <ul className="categories-aside" value="valor">
         <p>Categorias: </p>
         { categories.map(({ id, name }) => (
-          <Link to="/" key={ id }>
+          <Link to="/onlineStore" key={ id }>
             <li
               className="categories-item"
               id={ id }

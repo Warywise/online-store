@@ -10,7 +10,7 @@ export default class ButtonListCart extends React.Component {
     const productTotal = items.reduce((total, item) => total + item.quantity, 0);
     return (
       <button type="button" className="cart-button">
-        <Link data-testid="shopping-cart-button" to="/cart-items">
+        <Link data-testid="shopping-cart-button" to="/onlineStore/cart-items">
           <img className="iconCart" src={ ICON_CART } alt="Carrinho de Compras" />
         </Link>
         { productTotal > 0

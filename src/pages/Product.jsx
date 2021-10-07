@@ -50,7 +50,7 @@ class Product extends React.Component {
       loading
         ? (
           <section className="product-details">
-            <Link className="back-details" to="/">↶</Link>
+            <Link className="back-details" to="/onlineStore">↶</Link>
             <div className="details-div-content">
               <h1 data-testid="product-detail-name">
                 { prodDetails.title }
