@@ -1,0 +1,230 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #d8f3dc;
+  color: #091c15;
+}
+
+main {
+  display: flex;
+  margin-top: 15vh;
+}
+
+a, a:visited {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.loading {
+  font-size: xx-large;
+  margin: 5% 35%;
+  padding: 5px 10px;
+  width: 25%;
+}
+
+.loading span {
+  animation: Loading 1.5s;
+}
+
+.loading img {
+  animation: CartShake 1s infinite;
+  width: 50px;
+}
+
+@keyframes Loading {
+
+  from {
+    letter-spacing: -15px;
+    opacity: 0.5;
+  }
+
+  to {
+    letter-spacing: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes CartShake {
+
+  0% { transform: rotate(-10deg); }
+
+  50% { transform: rotate(10deg); }
+
+  100% { transform: rotate(-10deg); }
+}
+
+.categories-div {
+  min-width: 23%;
+}
+
+.main-div {
+  margin: 5px;
+  min-width: 70%;
+}
+
+/* Barra de pesquisa */
+.search-area {
+  margin: 5px;
+  padding: 30px;
+}
+
+.search-area > :nth-child( 1 ) {
+  padding: 5px;
+  width: 100%;
+}
+
+.search-area .search-input {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 2px #091c15;
+  font-size: larger;
+  margin: 5px 10px;
+  padding: 10px 15px;
+  width: 70%;
+}
+
+.search-area .search-input:focus {
+  outline: none;
+}
+
+.search-area .search-btn {
+  background-color: #b7e4c7;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 2px #091c15;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 3px;
+  padding: 10px 15px;
+}
+
+.search-area .search-btn:hover {
+  background-color: #84a98c;
+}
+
+.initial-msg {
+  font-size: larger;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.cart-button {
+  height: 50px;
+  margin: 10px;
+  position: relative;
+  width: 50px;
+}
+
+/* "Indicador" de quantidade no carrinho */
+.cart-button span {
+  background-color: darkgoldenrod;
+  border-radius: 50%;
+  font-size: medium;
+  font-weight: 600;
+  padding: 5px 10px;
+  position: absolute;
+  right: -25%;
+  top: 75%;
+}
+
+/* ↓ Início ListProducts style ↓ */
+.list-products {
+  display: flex;
+}
+
+.list-products ul {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.list-products ul li {
+  align-items: center;
+  background-color: #dfece2;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #091c15;
+  display: flex;
+  flex: auto;
+  flex-flow: column;
+  height: 70vh;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 5px 3px;
+  position: relative;
+  text-align: center;
+  width: 20%;
+}
+
+.list-products .product-img {
+  border-radius: 5px;
+  max-height: 50%;
+  width: 85%;
+}
+
+.product-price {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0.3px 0.3px 1px #d8f3dc;
+}
+
+.list-products ul li button {
+  background-color: #b7e4c7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 2px #091c15;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 0 10px;
+  padding: 5px 10px;
+}
+
+.list-products ul li button:hover {
+  background-color: #84a98c;
+}
+
+.free-shipping {
+  animation: FreeShip 0.25s linear infinite;
+  margin: auto;
+  position: absolute;
+  text-shadow: 0.3px 0.3px 1.5px #091c15;
+  top: 60%;
+}
+
+@keyframes FreeShip {
+
+  0% {
+    color: darkgoldenrod;
+  }
+
+  50% {
+    color: darkred;
+  }
+
+  100% {
+    color: darkorange;
+  }
+}
+
+/* ↑ Final ListProducts style ↑ */
+button .iconCart {
+  animation: Icon-spin 10s infinite linear;
+  width: 95%;
+}
+
+@keyframes Icon-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
