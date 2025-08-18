@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Redirect } from 'react-router';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Redirect } from "react-router";
 
 export default class InitialMsg extends Component {
   constructor() {
@@ -8,7 +8,7 @@ export default class InitialMsg extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      valueQuery: '',
+      valueQuery: "",
       redirect: false,
     };
   }
@@ -22,16 +22,16 @@ export default class InitialMsg extends Component {
   handleClick() {
     const { callback } = this.props;
     const { valueQuery } = this.state;
-    callback('', valueQuery);
-    this.setState({ valueQuery: '', redirect: true }, () => {
+    callback(valueQuery);
+    this.setState({ valueQuery: "", redirect: true }, () => {
       this.setState({ redirect: false });
     });
   }
 
   searchOnKeyDown = ({ keyCode }) => {
     const key = 13;
-    if (keyCode === key) document.querySelector('button.search-btn').click();
-  }
+    if (keyCode === key) document.querySelector("button.search-btn").click();
+  };
 
   mensagemInicial() {
     return (
@@ -42,29 +42,34 @@ export default class InitialMsg extends Component {
   }
 
   render() {
-    const { state: { valueQuery, redirect }, props: { condition } } = this;
+    const {
+      state: { valueQuery, redirect },
+      props: { condition },
+    } = this;
     return (
       <section className="search-area">
-        { redirect && <Redirect to="/" /> }
+        {redirect && <Redirect to="/" />}
         <div>
           <input
             type="text"
             className="search-input"
             data-testid="query-input"
-            value={ valueQuery }
-            onChange={ this.handleChange }
-            onKeyDown={ this.searchOnKeyDown }
+            value={valueQuery}
+            onChange={this.handleChange}
+            onKeyDown={this.searchOnKeyDown}
           />
           <button
             type="button"
             className="search-btn"
             data-testid="query-button"
-            onClick={ this.handleClick }
+            onClick={this.handleClick}
           >
             Pesquisar
           </button>
         </div>
-        { !condition && <div className="initial-msg">{ this.mensagemInicial() }</div> }
+        {!condition && (
+          <div className="initial-msg">{this.mensagemInicial()}</div>
+        )}
       </section>
     );
   }

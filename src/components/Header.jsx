@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ButtonListCart from './ButtonListCart';
-import '../styles/Header.css';
+import React from "react";
+import PropTypes from "prop-types";
+import ButtonListCart from "./ButtonListCart";
+import "../styles/Header.css";
 
 export default class Header extends React.Component {
   render() {
@@ -13,7 +13,7 @@ export default class Header extends React.Component {
           <span className="tos-logo" />
           <h2>Trybers Online Store</h2>
         </div>
-        <ButtonListCart items={ items } />
+        <ButtonListCart items={items} />
       </header>
     );
   }

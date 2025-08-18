@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class ButtonMoreDetails extends React.Component {
   render() {
-    const { productDetails: { category_id: categoryId, id } } = this.props;
+    const {
+      productDetails: { category: categoryId, id },
+    } = this.props;
+
     return (
-      <Link to={ `/onlineStore/product/${categoryId}/${id}` }>
-        <button
-          type="button"
-          data-testid="product-detail-link"
-        >
+      <Link to={`/product/${categoryId}/${id}`} params={{ test: 1 }}>
+        <button type="button" data-testid="product-detail-link">
           Mais detalhes
         </button>
       </Link>

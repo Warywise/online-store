@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export default class ButtonAddCart extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
     const { productDetails, callback, dataTestid } = this.props;
+
     return (
       <button
         type="button"
         className="cart-button-add-cart"
-        data-testid={ dataTestid }
-        onClick={ () => callback(productDetails) }
+        data-testid={dataTestid}
+        onClick={() => callback(productDetails)}
       >
         Adicionar ao Carrinho
       </button>
