@@ -8,11 +8,8 @@ export default class Header extends React.Component {
     const { items } = this.props;
     return (
       <header>
-        <h3>Bem Vindo!</h3>
-        <div className="t-o-s">
-          <span className="tos-logo" />
-          <h2>Trybers Online Store</h2>
-        </div>
+        <span className="tos-logo" />
+        <h3>Trybers Online Store</h3>
         <ButtonListCart items={items} />
       </header>
     );

@@ -12,7 +12,8 @@ main {
   margin-top: 15vh;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: currentColor;
   text-decoration: none;
 }
@@ -37,45 +38,22 @@ ul li {
   width: 50px;
 }
 
-@keyframes Loading {
-
-  from {
-    letter-spacing: -15px;
-    opacity: 0.5;
-  }
-
-  to {
-    letter-spacing: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes CartShake {
-
-  0% { transform: rotate(-10deg); }
-
-  50% { transform: rotate(10deg); }
-
-  100% { transform: rotate(-10deg); }
-}
-
-.categories-div {
-  min-width: 23%;
-}
-
 .main-div {
-  margin: 5px;
-  min-width: 70%;
+  margin: 4px;
+  width: 100%;
 }
 
 /* Barra de pesquisa */
 .search-area {
-  margin: 5px;
-  padding: 30px;
+  margin: 12px;
+  margin-left: 20%;
+  padding: 32px;
 }
 
-.search-area > :nth-child( 1 ) {
-  padding: 5px;
+.search-area > :nth-child(1) {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
   width: 100%;
 }
 
@@ -84,9 +62,9 @@ ul li {
   border-radius: 20px;
   box-shadow: 0 0 2px #091c15;
   font-size: larger;
-  margin: 5px 10px;
-  padding: 10px 15px;
-  width: 70%;
+  margin: 4px 8px;
+  padding: 8px 16px;
+  min-width: 60%;
 }
 
 .search-area .search-input:focus {
@@ -100,7 +78,7 @@ ul li {
   box-shadow: 0 0 2px #091c15;
   cursor: pointer;
   font-weight: 600;
-  margin: 3px;
+  margin: 4px;
   padding: 10px 15px;
 }
 
@@ -115,10 +93,10 @@ ul li {
 }
 
 .cart-button {
-  height: 50px;
-  margin: 10px;
+  height: 48px;
+  margin: 8px;
   position: relative;
-  width: 50px;
+  width: 48px;
 }
 
 /* "Indicador" de quantidade no carrinho */
@@ -127,7 +105,7 @@ ul li {
   border-radius: 50%;
   font-size: medium;
   font-weight: 600;
-  padding: 5px 10px;
+  padding: 4px 8px;
   position: absolute;
   right: -25%;
   top: 75%;
@@ -142,7 +120,7 @@ ul li {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
-  margin: 5px;
+  margin: 4px;
 }
 
 .list-products ul li {
@@ -153,10 +131,9 @@ ul li {
   display: flex;
   flex: auto;
   flex-flow: column;
-  height: 70vh;
   justify-content: space-around;
-  margin: 5px;
-  padding: 5px 3px;
+  margin: 4px;
+  padding: 4px;
   position: relative;
   text-align: center;
   width: 20%;
@@ -181,8 +158,8 @@ ul li {
   box-shadow: 0 0 2px #091c15;
   cursor: pointer;
   font-weight: 600;
-  margin: 0 0 10px;
-  padding: 5px 10px;
+  margin: 0 0 8px;
+  padding: 4px 8px;
 }
 
 .list-products ul li button:hover {
@@ -197,8 +174,20 @@ ul li {
   top: 60%;
 }
 
-@keyframes FreeShip {
+/* ↑ Final ListProducts style ↑ */
+button .iconCart {
+  animation: Icon-spin 10s infinite linear;
+  width: 95%;
+}
 
+@media (max-width: 768px) {
+  .search-area {
+    margin-left: 8px;
+    padding-inline: 0;
+  }
+}
+
+@keyframes FreeShip {
   0% {
     color: darkgoldenrod;
   }
@@ -212,19 +201,38 @@ ul li {
   }
 }
 
-/* ↑ Final ListProducts style ↑ */
-button .iconCart {
-  animation: Icon-spin 10s infinite linear;
-  width: 95%;
-}
-
 @keyframes Icon-spin {
-
   from {
     transform: rotate(0deg);
   }
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes Loading {
+  from {
+    letter-spacing: -15px;
+    opacity: 0.5;
+  }
+
+  to {
+    letter-spacing: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes CartShake {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
   }
 }

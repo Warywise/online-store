@@ -177,6 +177,7 @@ class App extends Component {
       getProducts,
       allEvaluation,
     } = this.state;
+
     return (
       <main>
         <BrowserRouter>

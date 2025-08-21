@@ -4,6 +4,7 @@ header {
   display: flex;
   justify-content: space-around;
   position: fixed;
+  text-align: center;
   text-shadow: 0.5px 0.5px 1px #d8f3dc;
   top: 0;
   width: 100%;
@@ -28,13 +29,8 @@ header .cart-button:active {
 
 .tos-logo {
   background-image: url('../logo_tos.png');
-  background-size: cover;
-  height: 65px;
-  margin: 5px 15px 5px 0;
-  width: 65px;
-}
-
-.t-o-s {
-  align-items: center;
-  display: flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 8px;
+  min-width: 20%;
 }

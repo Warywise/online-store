@@ -1,66 +1,27 @@
 .categories-aside {
-  background-color: #40916c;
+  background-color: #40916ddd;
   border-radius: 5px;
   box-shadow: 0 0 3px black;
   font-size: large;
   font-weight: 600;
   letter-spacing: 0.1rem;
-  margin: 10px;
   max-height: 80vh;
-  overflow-y: scroll;
-  padding: 5px 10px;
+  overflow: hidden;
+  padding: 8px;
   position: fixed;
   text-align: center;
   text-shadow: 0.3px 0.2px 1px #d8f3dc;
-  top: 80px;
+  top: 12%;
   z-index: 2;
 }
 
-/* início de scrollbar-styles */
-.categories-aside::-webkit-scrollbar {
-  border: 5px solid #d8f3dc;
-  width: 15px;
+.categories-list {
+  padding: 4px 8px 0 0;
+  overflow-y: scroll;
+  height: 62vh;
+  /* scrollbar-color: #5b7c63 #74c69d; */
 }
 
-.categories-aside::-webkit-scrollbar-thumb {
-  background-clip: padding-box;
-  background-color: #84a98c;
-  border: 0.05em solid #d8f3dc;
-  border-radius: 10px;
-}
-
-.categories-aside::-webkit-scrollbar-track {
-  background-color: #74c69d;
-}
-
-.categories-aside::-webkit-scrollbar-button:single-button {
-  background-color: #74c69d;
-  border-style: solid;
-  height: 13px;
-  width: 15px;
-}
-
-/* Up */
-.categories-aside::-webkit-scrollbar-button:single-button:vertical:decrement {
-  border-color: transparent transparent #091c15;
-  border-width: 8px;
-}
-
-.categories-aside::-webkit-scrollbar-button:single-button:decrement:hover {
-  border-color: transparent transparent #2f3e46;
-}
-
-/* Down */
-.categories-aside::-webkit-scrollbar-button:single-button:vertical:increment {
-  border-color: #091c15 transparent transparent;
-  border-width: 8px;
-}
-
-.categories-aside::-webkit-scrollbar-button:single-button:increment:hover {
-  border-color: #2f3e46 transparent transparent;
-}
-
-/* fim de scrollbar-styles */
 .categories-item {
   background-color: #74c69d;
   border-radius: 5px;
@@ -68,14 +29,81 @@
   cursor: pointer;
   font-size: medium;
   letter-spacing: 0.03rem;
-  margin: 5px 0;
-  padding: 5px 10px;
+  margin: 6px 0;
+  padding: 4px 8px;
   transition: 0.2s transform;
 }
 
 .categories-item:hover {
-  background-color: #52796f;
+  background-color: #6b9087;
+  box-shadow: 0 0 1.5px #d8f3dc;
+  transform: scale(1.025);
+}
+
+.categories-aside > p {
+  border: solid thin #d8f3dc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-block: 0;
+  padding: 12px 32px;
+}
+
+.categories-aside > p:active {
+  background-color: #40916d;
   box-shadow: 0 0 1.5px #d8f3dc;
   text-shadow: 0.3px 0.1px 1px #d8f3dc;
-  transform: scale(1.05);
+  transform: scale(0.95);
+}
+
+/* início de scrollbar-styles */
+.categories-list::-webkit-scrollbar {
+  border: 5px solid #d8f3dc;
+  width: 15px;
+}
+
+.categories-list::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #84a98c;
+  border: 0.05em solid #d8f3dc;
+  border-radius: 10px;
+}
+
+.categories-list::-webkit-scrollbar-track {
+  background-color: #74c69d;
+}
+
+.categories-list::-webkit-scrollbar-button:single-button {
+  background-color: #74c69d;
+  border-style: solid;
+  height: 13px;
+  width: 15px;
+}
+
+/* Up */
+.categories-list::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-color: transparent transparent #091c15;
+  border-width: 8px;
+}
+
+.categories-list::-webkit-scrollbar-button:single-button:decrement:hover {
+  border-color: transparent transparent #2f3e46;
+}
+
+/* Down */
+.categories-list::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-color: #091c15 transparent transparent;
+  border-width: 8px;
+}
+
+.categories-list::-webkit-scrollbar-button:single-button:increment:hover {
+  border-color: #2f3e46 transparent transparent;
+}
+
+/* fim de scrollbar-styles */
+
+@media (max-width: 768px) {
+  .categories-aside {
+    margin-inline: 20%;
+    width: 60%;
+  }
 }

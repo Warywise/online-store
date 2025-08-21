@@ -63,6 +63,7 @@ export default class InitialMsg extends Component {
             className="search-btn"
             data-testid="query-button"
             onClick={this.handleClick}
+            disabled={!valueQuery}
           >
             Pesquisar
           </button>
