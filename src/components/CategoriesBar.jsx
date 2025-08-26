@@ -13,13 +13,15 @@ export default class CategoriesBar extends Component {
     };
   }
 
-  handleClick = ({ target: { id } }) => {
+  handleClick = (id) => {
     const { callback } = this.props;
     callback(id);
   };
 
-  handleOpen = () => {
-    this.setState((prevState) => ({ isOpen: !prevState.isOpen }));
+  handleOpen = (id) => {
+    this.setState((prevState) => ({ isOpen: !prevState.isOpen }), () => {
+      if (id) this.handleClick(id);
+    });
   };
 
   render() {
@@ -32,11 +34,9 @@ export default class CategoriesBar extends Component {
         {isOpen && (
           <ul className="categories-list">
             {categories.map(({ slug: id, name }) => (
-              <Link to="/" onClick={this.handleOpen} key={id}>
+              <Link to="/" onClick={() => this.handleOpen(id)} key={id}>
                 <li
                   className="categories-item"
-                  id={id}
-                  onClick={this.handleClick}
                   aria-hidden="true"
                   data-testid="category"
                 >
