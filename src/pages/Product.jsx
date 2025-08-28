@@ -64,39 +64,46 @@ class Product extends React.Component {
         <Link className="back-details" to="/online-store">
           ↶
         </Link>
+
         <div className="details-div-content">
           <h1 data-testid="product-detail-name">
-            {prodDetails.title}
-            {" - "}
-            {Intl.NumberFormat("pt-br", {
-              style: "currency",
-              currency: "BRL",
-            }).format(prodDetails.price)}
+            <span>{prodDetails.title}</span>
+            <span>{" - "}</span>
+            <span>
+              {Intl.NumberFormat("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              }).format(prodDetails.price)}
+            </span>
           </h1>
         </div>
+
         <div className="details-div-content">
           <div className="product-info-details">
             <div>
               {prodDetails.brand && (
-                <>
+                <p>
                   <h3>Marca:</h3>
                   <span>{prodDetails.brand}</span>
-                </>
+                </p>
               )}
 
               {prodDetails.category && (
-                <>
+                <p>
                   <h3>Categoria:</h3>
                   <span>{prodDetails.category}</span>
-                </>
+                </p>
               )}
 
-              <h3>Tags:</h3>
-              <ul style={{ marginBlock: 0 }}>
-                {prodDetails.tags?.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
+              <p>
+                <h3>Tags:</h3>
+                <ul style={{ marginBlock: 0 }}>
+                  {prodDetails.tags?.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+              </p>
+
               {Number(prodDetails.rating) > 4 && (
                 <h4 data-testid="free-shipping">
                   <code>Satisfação Garantida!</code>

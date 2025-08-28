@@ -1,6 +1,6 @@
 .product-details {
   background-color: #dfece2;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 0 2px #091c15;
   display: flex;
   flex-flow: column;
@@ -13,7 +13,8 @@
   font-size: xx-large;
   font-weight: 600;
   line-height: 100%;
-  margin: 10px 0 -15px 10px;
+  margin: 8px;
+  margin-bottom: 0;
   padding: 4px 20px 0;
   width: max-content;
 }
@@ -23,8 +24,12 @@
   box-shadow: 0 0 2px 1px #091c15;
 }
 
+.details-div-content h1 {
+  line-height: 100%;
+}
+
 .product-details .details-div-content {
-  margin: 5px 15px;
+  margin: 4px 12px;
 }
 
 .product-info-details {
@@ -34,25 +39,37 @@
   width: 100%;
 }
 
+.product-info-details h3 {
+  margin-block: 0;
+}
+
+.product-info-details span {
+  margin-left: 8px;
+}
+
 .product-info-details li {
   font-size: large;
-  margin: 5px 0;
+  margin-left: 8px;
 }
 
 .product-info-details img {
-  border: groove thick #354f52;
+  border: groove 2px #354f52;
+  border-radius: 4px;
   width: 35%;
 }
 
 .product-info-details .cart-button-add-cart {
-  background-color: #b7e4c7;
+  background-color: #40916d;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 0 2px #091c15;
+  border-radius: 16px;
+  box-shadow: 0.25px 0.25px 2px #091c15;
+  color: white;
   cursor: pointer;
+  font-size: medium;
   font-weight: 600;
-  margin: 0 0 10px;
-  padding: 5px 10px;
+  margin: 16px;
+  padding: 12px 16px;
+  text-shadow: 0.25px 0.25px 2px #091c15;
 }
 
 .product-info-details .cart-button-add-cart:hover {
@@ -63,16 +80,25 @@
   align-items: flex-start;
   display: flex;
   flex-flow: column;
+  gap: 16px;
   justify-content: space-evenly;
   width: 40%;
+}
+
+.product-info-details div p {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0.5px 0.25px 1px;
+  margin: 0;
+  padding: 12px;
 }
 
 .eval-coments {
   background-color: #a5d8c421;
   border: groove;
-  margin: 5px;
+  border-radius: 4px;
+  margin: 4px;
   max-width: 75%;
-  padding: 5px 10px;
+  padding: 4px 12px;
 }
 
 .whiteStar {
@@ -87,17 +113,18 @@
 
 .evaluation-form {
   align-items: center;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 0 2px #091c15;
   display: flex;
   flex-flow: column;
-  margin: 10px 5px;
-  padding: 10px;
-  width: 50%;
+  margin: 32px 4px;
+  padding: 12px;
+  text-align: center;
+  width: 75%;
 }
 
 .evaluation-form > div {
-  margin: 5px;
+  margin: 4px;
   width: 100%;
 }
 
@@ -106,13 +133,13 @@
   content: '★';
   cursor: pointer;
   font-size: x-large;
-  margin: 0 10px;
+  margin: 0 8px;
 }
 
 .evaluation-form .eval-radio-input {
   display: none;
-  margin-right: 15px;
   opacity: 0;
+  visibility: hidden;
 }
 
 .evaluation-form .eval-radio-input:checked ~ .eval-star:before {
@@ -126,14 +153,17 @@
 }
 
 .evaluation-form button {
-  background-color: #d1dfd6;
+  background-color: #40916d;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 2px #091c15;
+  border-radius: 8px;
+  box-shadow: 0.25px 0.25px 2px #091c15;
+  color: white;
   cursor: pointer;
+  font-size: medium;
   font-weight: 600;
-  margin: 10px;
-  padding: 5px 35px;
+  margin: 12px;
+  padding: 8px 24px;
+  text-shadow: 0.25px 0.25px 2px #091c15;
 }
 
 .evaluation-form button:hover {
@@ -142,6 +172,36 @@
 }
 
 .evaluation-form .eval-email {
-  padding: 5px 10px;
+  padding: 4px 12px;
   width: 75%;
+}
+
+@media (max-width: 426px) {
+  .details-div-content h1 {
+    display: grid;
+    text-align: center;
+  }
+
+  .details-div-content h1 :nth-child(2) {
+    display: none;
+  }
+
+  .product-info-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .product-info-details div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+
+  .product-info-details img {
+    width: 60%;
+  }
 }
