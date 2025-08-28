@@ -61,7 +61,7 @@ class Product extends React.Component {
 
     return loading ? (
       <section className="product-details">
-        <Link className="back-details" to="/">
+        <Link className="back-details" to="/online-store">
           ↶
         </Link>
         <div className="details-div-content">

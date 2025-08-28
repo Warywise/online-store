@@ -34,7 +34,7 @@ export default class CategoriesBar extends Component {
         {isOpen && (
           <ul className="categories-list">
             {categories.map(({ slug: id, name }) => (
-              <Link to="/" onClick={() => this.handleOpen(id)} key={id}>
+              <Link to="/online-store/" onClick={() => this.handleOpen(id)} key={id}>
                 <li
                   className="categories-item"
                   aria-hidden="true"

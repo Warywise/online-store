@@ -48,7 +48,7 @@ export default class InitialMsg extends Component {
     } = this;
     return (
       <section className="search-area">
-        {redirect && <Redirect to="/" />}
+        {redirect && <Redirect to="/online-store" />}
         <div>
           <input
             type="text"

@@ -184,7 +184,7 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path="/"
+              path="/online-store"
               render={() => (
                 <>
                   <Header items={getProducts} />
@@ -214,7 +214,7 @@ class App extends Component {
                 </>
               )}
             />
-            <Route path="/cart-items">
+            <Route path="/online-store/cart-items">
               <Header items={getProducts} />
               <CartItems
                 itemsAdd={getProducts}
@@ -223,7 +223,7 @@ class App extends Component {
               />
             </Route>
             <Route
-              path="/product/:categoryId/:id"
+              path="/online-store/product/:categoryId/:id"
               render={(props) => (
                 <>
                   <Header items={getProducts} />
@@ -253,7 +253,7 @@ class App extends Component {
                 </>
               )}
             />
-            <Route path="/checkout">
+            <Route path="/online-store/checkout">
               <Header items={getProducts} />
               <Checkout cartItems={getProducts} finish={this.finishShop} />
             </Route>

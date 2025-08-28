@@ -38,7 +38,7 @@ export default class CartItems extends React.Component {
             >
               Seu carrinho está vazio
             </h2>
-            <Link to="/">
+            <Link to="/online-store">
               <button className="button-add-more-items" type="button">
                 Adicionar Itens
               </button>
@@ -118,7 +118,7 @@ export default class CartItems extends React.Component {
             </ul>
             <div className="price-total">
               <div className="completed-shopping">
-                <Link to="/">
+                <Link to="/online-store">
                   <button className="button-add-more-items" type="button">
                     Adicionar Mais Itens
                   </button>
@@ -136,7 +136,7 @@ export default class CartItems extends React.Component {
                     )
                   )}`}
                 </h2>
-                <Link to="/checkout">
+                <Link to="/online-store/checkout">
                   <button
                     className="button-add-more-items"
                     type="button"

@@ -9,7 +9,7 @@ class ButtonMoreDetails extends React.Component {
     } = this.props;
 
     return (
-      <Link to={`/product/${categoryId}/${id}`} params={{ test: 1 }}>
+      <Link to={`/online-store/product/${categoryId}/${id}`} params={{ test: 1 }}>
         <button type="button" data-testid="product-detail-link">
           Mais detalhes
         </button>

@@ -86,7 +86,7 @@ export default class Checkout extends React.Component {
           </label>
           <button type="submit">Finalizar</button>
         </form>
-        {finish && <Redirect to="/" />}
+        {finish && <Redirect to="/online-store" />}
       </section>
     );
   }
