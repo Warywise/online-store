@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  padding: 12px;
   width: 100%;
 }
 
@@ -21,31 +23,37 @@
 
 .item-cart {
   align-items: center;
+  border-radius: 2px;
   background-color: #cad2c5;
   display: flex;
-  justify-content: space-between;
-  margin: 30px;
-  padding: 0.5em 1em;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  padding: 16px;
+  margin-bottom: 1px;
 }
 
 .image-item-cart {
   border: solid #354f52;
-  width: 100px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  width: 30%;
+  max-width: 120px;
 }
 
 .text-item-cart {
   align-content: center;
   display: flex;
   font-size: 1.1em;
-  margin: 20px;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 160px;
+  padding: 16px;
 }
 
 .order-details {
   align-items: center;
   display: flex;
-  flex-direction: column; /* Preço e Quantidade */
+  flex-direction: column; /* Quantidade e Preço */
   justify-content: center;
   line-height: 0;
 }
@@ -55,10 +63,6 @@
   display: flex;
   font-size: 1.5em;
   padding: 0 10px;
-}
-
-.text-price-item {
-  font-size: 1.5em;
 }
 
 .cart-empty-message {
@@ -82,7 +86,7 @@
   transform: scale(1.01);
 }
 
-.moviment-quantity {
+.change-quantity {
   align-items: center;
   background-color: #52796f;
   border: solid thin #091c158f;
@@ -90,18 +94,17 @@
   color: white;
   cursor: pointer;
   display: flex;
-  font-size: 16px;
+  font-size: 32px;
   font-weight: 600;
-  height: 40px;
   justify-content: center;
   margin: 5px 10px;
   text-align: center;
   text-decoration: none;
   transition-duration: 0.4s;
-  width: 40px;
+  padding: 4px 16px;
 }
 
-.moviment-quantity:disabled {
+.change-quantity:disabled {
   background-color: #ccc;
 }
 
@@ -124,6 +127,10 @@
   width: 40px;
 }
 
+.text-price-item {
+  font-size: 1.25em;
+}
+
 .price-total {
   align-items: flex-end;
   display: flex;
@@ -134,19 +141,19 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 16px;
 }
 
 .button-add-more-items {
   background-color: #52796f;
   border: none;
-  border-radius: 20px;
+  border-radius: 16px;
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   margin: 4px 2px;
-  padding: 15px 32px;
+  padding: 12px 16px;
   text-align: center;
   text-decoration: none;
   transition-duration: 0.4s;

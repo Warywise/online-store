@@ -5,20 +5,9 @@ import ICON_CART from "../icons/cart.svg";
 import "../styles/CartItems.css";
 
 export default class CartItems extends React.Component {
-  // componentDidMount() {
-  //   this.sumPricesTotal();
-  // }
-
-  // sumPricesTotal = () => {
-  //   const itemsStorage = JSON.parse(localStorage.getItem('getProducts'));
-  //   const priceTotal = itemsStorage
-  //     .map(({ price, quantity }) => price * quantity)
-  //     .reduce((acc, cur) => (acc + cur), 0);
-  //   this.setState({ priceTotal });
-  // };
-
   render() {
     const { itemsAdd, callback, removeItemCart } = this.props;
+
     return (
       <div className="cart-items">
         <span className="cart-items-title">
@@ -64,7 +53,7 @@ export default class CartItems extends React.Component {
                     <span className="quantity">
                       {objectItem.quantity > 1 ? (
                         <button
-                          className="moviment-quantity"
+                          className="change-quantity"
                           data-testid="product-decrease-quantity"
                           type="button"
                           onClick={() => {
@@ -92,7 +81,7 @@ export default class CartItems extends React.Component {
                         {objectItem.quantity}
                       </h4>
                       <button
-                        className="moviment-quantity"
+                        className="change-quantity"
                         data-testid="product-increase-quantity"
                         type="button"
                         onClick={() => {
@@ -125,7 +114,7 @@ export default class CartItems extends React.Component {
                 </Link>
               </div>
               <div className="completed-shopping">
-                <h2>
+                <h3>
                   {`Valor Total: ${Intl.NumberFormat("pt-br", {
                     style: "currency",
                     currency: "BRL",
@@ -135,7 +124,7 @@ export default class CartItems extends React.Component {
                       0
                     )
                   )}`}
-                </h2>
+                </h3>
                 <Link to="/online-store/checkout">
                   <button
                     className="button-add-more-items"
