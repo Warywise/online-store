@@ -33,12 +33,23 @@ export default class Checkout extends React.Component {
                   style: "currency",
                   currency: "BRL",
                 }).format(price)}
-                <b> X </b>
+                <b> x </b>
                 {quantity}
               </p>
             </div>
           ))}
         </div>
+        <h3>
+          {`Valor Total: ${Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "BRL",
+          }).format(
+            cartItems.reduce(
+              (acc, { price, quantity }) => acc + price * quantity,
+              0
+            )
+          )}`}
+        </h3>
         <form className="checkout-form" onSubmit={this.handleClick}>
           <label className="checkout-inputs" htmlFor="fullname">
             Nome:

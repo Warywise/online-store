@@ -2,8 +2,8 @@
   border: groove;
   display: flex;
   flex-direction: column;
-  margin: 3% auto;
-  padding: 15px;
+  margin: 8px auto;
+  padding: 12px;
   width: 85%;
 }
 
@@ -14,13 +14,13 @@
   display: flex;
   margin: 20px auto;
   overflow-x: scroll;
-  padding: 5px;
+  padding: 8px;
   width: 75%;
 }
 
 .checkout-list p b {
   font-size: large;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 
 .checkout-items {
@@ -33,10 +33,10 @@
   flex: auto;
   flex-flow: column;
   justify-content: space-around;
-  margin: 5px;
+  margin: 4px;
   max-width: fit-content;
-  min-width: 150px;
-  padding: 5px 3px;
+  min-width: 160px;
+  padding: 6px 4px;
   text-align: center;
 }
 
@@ -96,23 +96,25 @@
   box-shadow: 0 0 2px #091c15;
   display: flex;
   flex-flow: wrap;
-  justify-content: right;
-  padding: 15px;
+  justify-content: space-between;
+  padding: 8px;
+  column-gap: 4px;
 }
 
 .checkout-inputs {
-  margin: auto 15px;
-  width: 45%;
+  margin-block: auto;
+  min-width: 45%;
 }
 
 .checkout-inputs input {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 2px 0.5px #091c15;
-  margin: 15px;
+  display: block;
+  margin-block: 12px;
   outline: none;
-  padding: 5px 10px;
-  width: 75%;
+  padding-block: 6px;
+  width: 100%;
 }
 
 .checkout-form button {
@@ -121,13 +123,20 @@
   border-radius: 10px;
   color: white;
   cursor: pointer;
-  font-size: 16px;
-  margin: 15px auto 10px;
-  padding: 5px;
-  width: 35%;
+  display: block;
+  font-size: 18px;
+  margin: 12px auto 8px;
+  padding: 8px;
+  width: 45%;
 }
 
 .checkout-form button:hover {
   background-color: #6c9288;
   box-shadow: 0 0 1px 0.3px #091c15;
+}
+
+@media (max-width: 426px) {
+  .checkout-inputs {
+  width: 90%;
+}
 }
